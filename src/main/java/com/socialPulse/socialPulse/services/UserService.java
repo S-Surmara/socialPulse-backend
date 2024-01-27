@@ -18,7 +18,7 @@ public class UserService {
         // Implement your authentication logic here
         User user = userRepository.findByUsername(username);
 
-        System.out.println("Username: " + username);
+        System.out.println("Username in service : " + username);
         System.out.println("Expected Password: " + password);
         System.out.println("Actual User: " + user);
         System.out.println("Actual Password: " + (user != null ? user.getPassword() : null));
