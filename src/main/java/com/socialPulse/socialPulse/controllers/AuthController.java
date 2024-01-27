@@ -3,10 +3,17 @@ package com.socialPulse.socialPulse.controllers;
 import com.socialPulse.socialPulse.dto.LoginRequest;
 import com.socialPulse.socialPulse.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.HashMap;
+import java.util.Map;
+
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 public class AuthController {
     private final UserService userService;
@@ -17,16 +24,18 @@ public class AuthController {
     }
 
     @PostMapping("/login")
-    public String login(@RequestBody LoginRequest loginRequest) {
-        // Extract username and password from the login request
+    public ResponseEntity<Map<String, String>> login(@RequestBody LoginRequest loginRequest) {
+        Map<String, String> response = new HashMap<>();
         String username = loginRequest.getUsername();
-        String password = loginRequest.getPassword();
+        System.out.println("Username in controller : " + username);
 
-        // Call the service to authenticate the user
-        if (userService.authenticateUser(username, password)) {
-            return "Login successful!";
+        // Your authentication logic
+        if (userService.authenticateUser(loginRequest.getUsername(), loginRequest.getPassword())) {
+            response.put("response", "success");
+            return ResponseEntity.ok(response);
         } else {
-            return "Login failed. Invalid username or password.";
+            response.put("response", "failure");
+            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body(response);
         }
     }
 }
