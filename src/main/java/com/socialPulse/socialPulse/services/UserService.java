@@ -44,4 +44,16 @@ public class UserService {
 
         return true; // User created successfully
     }
+
+    public Long authenticateUserAndGetId(String username, String password) {
+        // Implement your authentication logic here
+        User user = userRepository.findByUsername(username);
+
+        // Check if the user exists and the password matches
+        if (user != null && user.getPassword().equals(password)) {
+            return user.getId();
+        }
+
+        return null; // Return null if authentication fails
+    }
 }
