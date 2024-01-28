@@ -1,5 +1,6 @@
 package com.socialPulse.socialPulse.services;
 
+import com.socialPulse.socialPulse.dto.SignupRequest;
 import com.socialPulse.socialPulse.modal.User;
 import com.socialPulse.socialPulse.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,5 +26,22 @@ public class UserService {
 
         // Check if the user exists and the password matches
         return user != null && user.getPassword().equals(password);
+    }
+
+    public boolean createUser(SignupRequest signupRequest) {
+        // Check if the username is already taken
+        if (userRepository.findByUsername(signupRequest.getUsername()) != null) {
+            return false; // Username already exists
+        }
+
+        // Create a new user
+        User newUser = new User();
+        newUser.setUsername(signupRequest.getUsername());
+        newUser.setPassword(signupRequest.getPassword());
+
+        // Save the new user to the database
+        userRepository.save(newUser);
+
+        return true; // User created successfully
     }
 }
