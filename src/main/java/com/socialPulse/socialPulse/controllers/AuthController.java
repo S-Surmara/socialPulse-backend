@@ -30,9 +30,12 @@ public class AuthController {
         String username = loginRequest.getUsername();
         System.out.println("Username in controller : " + username);
 
+        Long userId = userService.authenticateUserAndGetId(loginRequest.getUsername(), loginRequest.getPassword());
+
         // Your authentication logic
         if (userService.authenticateUser(loginRequest.getUsername(), loginRequest.getPassword())) {
             response.put("response", "success");
+            response.put("userId", String.valueOf(userId));
             return ResponseEntity.ok(response);
         } else {
             response.put("response", "failure");
