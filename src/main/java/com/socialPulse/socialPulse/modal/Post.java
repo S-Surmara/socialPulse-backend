@@ -16,24 +16,24 @@ public class Post {
     @Column(columnDefinition = "mediumblob")
     private byte[] image;
 
-    @Column(name = "user_id")
-    private Long userId;
+    @Column(name = "username")
+    private String username;
 
     // Default constructor
     public Post() {
     }
 
     // Constructor with text and userId parameters
-    public Post(String text, Long userId) {
+    public Post(String text, String username) {
         this.text = text;
-        this.userId = userId;
+        this.username = username;
     }
 
     // Constructor with text, image, and userId parameters
-    public Post(String text, byte[] image, Long userId) {
+    public Post(String text, byte[] image, String username) {
         this.text = text;
         this.image = image;
-        this.userId = userId;
+        this.username = username;
     }
 
     public Long getId() {
@@ -60,11 +60,11 @@ public class Post {
         this.image = image;
     }
 
-    public Long getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserId(Long userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 }

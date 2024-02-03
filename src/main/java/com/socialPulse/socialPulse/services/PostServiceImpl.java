@@ -24,7 +24,7 @@ public class PostServiceImpl implements PostService {
         // Extract text and image from PostDTO
         String text = postDTO.getText();
         MultipartFile multipartImage = postDTO.getImage();
-        Long userId = postDTO.getUserId();
+        String username = postDTO.getUsername();
 
         // Convert MultipartFile to byte[]
         byte[] image = null;
@@ -37,15 +37,15 @@ public class PostServiceImpl implements PostService {
 
         // Create a new Post entity using the extracted values
         Post post;
-        if(image != null ) post = new Post(text, image , userId);
-        else post = new Post(text , userId);
+        if(image != null ) post = new Post(text, image , username);
+        else post = new Post(text , username);
         return postRepository.save(post);
     }
 
     @Override
-    public List<Post> getUserPosts(Long userId) {
+    public List<Post> getUserPosts(String username) {
         // Implement logic to retrieve posts for a specific user
         // You can adjust this based on your user structure
-        return postRepository.findByUserId(userId);
+        return postRepository.findByUsername(username);
     }
 }

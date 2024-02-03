@@ -459,3 +459,339 @@ org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-22
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
 2024-02-03 16:01:57 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-03 16:30:32 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-03 16:34:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-03 16:43:48 jdbc[15]: null
+org.h2.message.DbException: The connection was not closed by the application and is garbage collected [90018-220]
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.message.DbException.get(DbException.java:188)
+	at org.h2.jdbc.JdbcConnection.closeOld(JdbcConnection.java:190)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:132)
+	at org.h2.Driver.connect(Driver.java:59)
+	at com.zaxxer.hikari.util.DriverDataSource.getConnection(DriverDataSource.java:138)
+	at com.zaxxer.hikari.pool.PoolBase.newConnection(PoolBase.java:359)
+	at com.zaxxer.hikari.pool.PoolBase.newPoolEntry(PoolBase.java:201)
+	at com.zaxxer.hikari.pool.HikariPool.createPoolEntry(HikariPool.java:470)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:733)
+	at com.zaxxer.hikari.pool.HikariPool$PoolEntryCreator.call(HikariPool.java:712)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientConnectionException: The connection was not closed by the application and is garbage collected [90018-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:690)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	... 16 more
+2024-02-03 17:21:06 jdbc[35]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from posts[*]:"; SQL statement:
+select * from posts: [42000-220]
+2024-02-03 17:21:12 jdbc[35]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from [*]table posts:"; expected "identifier"; SQL statement:
+select * from table posts: [42001-220]
+2024-02-03 18:34:46 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop [*]from posts"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+drop from posts [42001-220]
+2024-02-03 18:34:52 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop [*]from posts"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+drop from posts [42001-220]
+2024-02-03 18:34:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop [*]from posts"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+drop from posts [42001-220]
+2024-02-03 18:34:56 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop [*]from posts"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+drop from posts [42001-220]
+2024-02-03 18:34:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop [*]from posts"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+drop from posts [42001-220]
+2024-02-03 18:34:58 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop [*]from posts"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+drop from posts [42001-220]
+2024-02-03 18:34:59 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop [*]from posts"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+drop from posts [42001-220]
+2024-02-03 18:35:03 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop [*]from table posts"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+drop from table posts [42001-220]
+2024-02-03 18:35:10 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "drop [*]* from table posts"; expected "TABLE, INDEX, USER, SEQUENCE, CONSTANT, TRIGGER, MATERIALIZED, VIEW, ROLE, ALIAS, SCHEMA, ALL OBJECTS, DOMAIN, TYPE, DATATYPE, AGGREGATE, SYNONYM"; SQL statement:
+drop * from table posts [42001-220]
+2024-02-03 18:35:54 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "posts" not found; SQL statement:
+select * from posts [42102-220]
+2024-02-03 18:37:19 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "user_table" already exists; SQL statement:
+create table user_table (id bigint generated by default as identity, email varchar(255), name varchar(255), password varchar(255), username varchar(255), primary key (id)) [42101-220]
+2024-02-03 18:42:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-03 18:56:05 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-03 19:14:42 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into user_table ([*]"; expected "identifier"; SQL statement:
+insert into user_table ( [42001-220]
+2024-02-03 19:15:42 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "kabir" not found; SQL statement:
+insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'Kabir Thapar' , 'kabir',kabir) [42122-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.dml.Insert.doPrepare(Insert.java:300)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:583)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:634)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:557)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp.query(WebApp.java:1119)
+	at org.h2.server.web.WebApp.process(WebApp.java:245)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-02-03 19:15:51 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Column "kabir" not found; SQL statement:
+insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'Kabir Thapar' , 'kabir',kabir) [42122-220]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:514)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:489)
+	at org.h2.message.DbException.get(DbException.java:223)
+	at org.h2.message.DbException.get(DbException.java:199)
+	at org.h2.expression.ExpressionColumn.getColumnException(ExpressionColumn.java:244)
+	at org.h2.expression.ExpressionColumn.optimizeOther(ExpressionColumn.java:226)
+	at org.h2.expression.ExpressionColumn.optimize(ExpressionColumn.java:213)
+	at org.h2.command.dml.Insert.doPrepare(Insert.java:300)
+	at org.h2.command.dml.DataChangeStatement.prepare(DataChangeStatement.java:37)
+	at org.h2.command.Parser.prepareCommand(Parser.java:583)
+	at org.h2.engine.SessionLocal.prepareLocal(SessionLocal.java:634)
+	at org.h2.engine.SessionLocal.prepareCommand(SessionLocal.java:557)
+	at org.h2.jdbc.JdbcConnection.prepareCommand(JdbcConnection.java:1116)
+	at org.h2.jdbc.JdbcStatement.executeInternal(JdbcStatement.java:237)
+	at org.h2.jdbc.JdbcStatement.execute(JdbcStatement.java:223)
+	at org.h2.server.web.WebApp.getResult(WebApp.java:1345)
+	at org.h2.server.web.WebApp.query(WebApp.java:1143)
+	at org.h2.server.web.WebApp.query(WebApp.java:1119)
+	at org.h2.server.web.WebApp.process(WebApp.java:245)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:177)
+	at org.h2.server.web.JakartaWebServlet.doGet(JakartaWebServlet.java:129)
+	at org.h2.server.web.JakartaWebServlet.doPost(JakartaWebServlet.java:166)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:340)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:896)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1744)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+2024-02-03 19:36:13 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'kabir thapar','kabir','kabir') \000d\000a[*]insert into user_table (email,name,password,username) values ('anjali@gmail.com' , 'anjali surmara','anjali','anjali') \000d\000ainsert into user_table (email,name,password,username) values ('subham@gmail.com' , 'subham surmara','subham','subham')\000d\000ainsert into user_table (email,name,password,username) values ('manish@gmail.com' , 'manish manchala','manish','manish')\000d\000ainsert into user_table (email,name,password,username) values ('aditya@gmail.com' , 'aditya singh','aditya','aditya')\000d\000ainsert into user_table (email,name,password,username) values ('pavan@gmail.com' , 'pavan ambati','pavan','pavan')"; SQL statement:
+insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'kabir thapar','kabir','kabir') 
+insert into user_table (email,name,password,username) values ('anjali@gmail.com' , 'anjali surmara','anjali','anjali') 
+insert into user_table (email,name,password,username) values ('subham@gmail.com' , 'subham surmara','subham','subham')
+insert into user_table (email,name,password,username) values ('manish@gmail.com' , 'manish manchala','manish','manish')
+insert into user_table (email,name,password,username) values ('aditya@gmail.com' , 'aditya singh','aditya','aditya')
+insert into user_table (email,name,password,username) values ('pavan@gmail.com' , 'pavan ambati','pavan','pavan') [42000-220]
+2024-02-03 19:36:25 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into user_table (email,name,password,username) values ('anjali@gmail.com' , 'anjali surmara','anjali','anjali') \000d\000a[*]insert into user_table (email,name,password,username) values ('subham@gmail.com' , 'subham surmara','subham','subham')\000d\000ainsert into user_table (email,name,password,username) values ('manish@gmail.com' , 'manish manchala','manish','manish')\000d\000ainsert into user_table (email,name,password,username) values ('aditya@gmail.com' , 'aditya singh','aditya','aditya')\000d\000ainsert into user_table (email,name,password,username) values ('pavan@gmail.com' , 'pavan ambati','pavan','pavan')"; SQL statement:
+insert into user_table (email,name,password,username) values ('anjali@gmail.com' , 'anjali surmara','anjali','anjali') 
+insert into user_table (email,name,password,username) values ('subham@gmail.com' , 'subham surmara','subham','subham')
+insert into user_table (email,name,password,username) values ('manish@gmail.com' , 'manish manchala','manish','manish')
+insert into user_table (email,name,password,username) values ('aditya@gmail.com' , 'aditya singh','aditya','aditya')
+insert into user_table (email,name,password,username) values ('pavan@gmail.com' , 'pavan ambati','pavan','pavan') [42000-220]
+2024-02-03 19:38:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'kabir thapar','kabir','kabir') \000d\000a[*]insert into user_table (email,name,password,username) values ('anjali@gmail.com' , 'anjali surmara','anjali','anjali') \000d\000ainsert into user_table (email,name,password,username) values ('subham@gmail.com' , 'subham surmara','subham','subham')\000d\000ainsert into user_table (email,name,password,username) values ('manish@gmail.com' , 'manish manchala','manish','manish')\000d\000ainsert into user_table (email,name,password,username) values ('aditya@gmail.com' , 'aditya singh','aditya','aditya')\000d\000ainsert into user_table (email,name,password,username) values ('pavan@gmail.com' , 'pavan ambati','pavan','pavan')"; SQL statement:
+insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'kabir thapar','kabir','kabir') 
+insert into user_table (email,name,password,username) values ('anjali@gmail.com' , 'anjali surmara','anjali','anjali') 
+insert into user_table (email,name,password,username) values ('subham@gmail.com' , 'subham surmara','subham','subham')
+insert into user_table (email,name,password,username) values ('manish@gmail.com' , 'manish manchala','manish','manish')
+insert into user_table (email,name,password,username) values ('aditya@gmail.com' , 'aditya singh','aditya','aditya')
+insert into user_table (email,name,password,username) values ('pavan@gmail.com' , 'pavan ambati','pavan','pavan') [42000-220]
+2024-02-03 19:38:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'kabir thapar','kabir','kabir') \000d\000a[*]insert into user_table (email,name,password,username) values ('anjali@gmail.com' , 'anjali surmara','anjali','anjali') \000d\000ainsert into user_table (email,name,password,username) values ('subham@gmail.com' , 'subham surmara','subham','subham')\000d\000ainsert into user_table (email,name,password,username) values ('manish@gmail.com' , 'manish manchala','manish','manish')\000d\000ainsert into user_table (email,name,password,username) values ('aditya@gmail.com' , 'aditya singh','aditya','aditya')\000d\000ainsert into user_table (email,name,password,username) values ('pavan@gmail.com' , 'pavan ambati','pavan','pavan')"; SQL statement:
+insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'kabir thapar','kabir','kabir') 
+insert into user_table (email,name,password,username) values ('anjali@gmail.com' , 'anjali surmara','anjali','anjali') 
+insert into user_table (email,name,password,username) values ('subham@gmail.com' , 'subham surmara','subham','subham')
+insert into user_table (email,name,password,username) values ('manish@gmail.com' , 'manish manchala','manish','manish')
+insert into user_table (email,name,password,username) values ('aditya@gmail.com' , 'aditya singh','aditya','aditya')
+insert into user_table (email,name,password,username) values ('pavan@gmail.com' , 'pavan ambati','pavan','pavan') [42000-220]
+2024-02-03 19:38:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'kabir thapar','kabir','kabir') \000d\000a[*]insert into user_table (email,name,password,username) values ('anjali@gmail.com' , 'anjali surmara','anjali','anjali') \000d\000ainsert into user_table (email,name,password,username) values ('subham@gmail.com' , 'subham surmara','subham','subham')\000d\000ainsert into user_table (email,name,password,username) values ('manish@gmail.com' , 'manish manchala','manish','manish')\000d\000ainsert into user_table (email,name,password,username) values ('aditya@gmail.com' , 'aditya singh','aditya','aditya')\000d\000ainsert into user_table (email,name,password,username) values ('pavan@gmail.com' , 'pavan ambati','pavan','pavan')"; SQL statement:
+insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'kabir thapar','kabir','kabir') 
+insert into user_table (email,name,password,username) values ('anjali@gmail.com' , 'anjali surmara','anjali','anjali') 
+insert into user_table (email,name,password,username) values ('subham@gmail.com' , 'subham surmara','subham','subham')
+insert into user_table (email,name,password,username) values ('manish@gmail.com' , 'manish manchala','manish','manish')
+insert into user_table (email,name,password,username) values ('aditya@gmail.com' , 'aditya singh','aditya','aditya')
+insert into user_table (email,name,password,username) values ('pavan@gmail.com' , 'pavan ambati','pavan','pavan') [42000-220]
+2024-02-03 19:38:52 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "pasts" not found; SQL statement:
+select * from pasts [42102-220]
+2024-02-03 19:39:57 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-03 19:40:22 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-03 19:40:36 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-03 19:41:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-03 19:41:40 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-03 20:05:49 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'kabir thapar','kabir','kabir’),\000d\000a('anjali@gmail.com' , 'anjali surmara','anjali','anjali[*]’),\000d\000a('subham@gmail.com' , 'subham surmara','subham','subham’),\000d\000a('manish@gmail.com' , 'manish manchala','manish','manish’),\000d\000a('aditya@gmail.com' , 'aditya singh','aditya','aditya’),\000d\000a('pavan@gmail.com' , 'pavan ambati','pavan','pavan')"; SQL statement:
+insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'kabir thapar','kabir','kabir’),
+('anjali@gmail.com' , 'anjali surmara','anjali','anjali’),
+('subham@gmail.com' , 'subham surmara','subham','subham’),
+('manish@gmail.com' , 'manish manchala','manish','manish’),
+('aditya@gmail.com' , 'aditya singh','aditya','aditya’),
+('pavan@gmail.com' , 'pavan ambati','pavan','pavan') [42000-220]
+2024-02-03 20:05:52 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'kabir thapar','kabir','kabir’),\000d\000a('anjali@gmail.com' , 'anjali surmara','anjali','anjali[*]’),\000d\000a('subham@gmail.com' , 'subham surmara','subham','subham’),\000d\000a('manish@gmail.com' , 'manish manchala','manish','manish’),\000d\000a('aditya@gmail.com' , 'aditya singh','aditya','aditya’),\000d\000a('pavan@gmail.com' , 'pavan ambati','pavan','pavan')"; SQL statement:
+insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'kabir thapar','kabir','kabir’),
+('anjali@gmail.com' , 'anjali surmara','anjali','anjali’),
+('subham@gmail.com' , 'subham surmara','subham','subham’),
+('manish@gmail.com' , 'manish manchala','manish','manish’),
+('aditya@gmail.com' , 'aditya singh','aditya','aditya’),
+('pavan@gmail.com' , 'pavan ambati','pavan','pavan') [42000-220]
+2024-02-03 20:06:01 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'kabir thapar','kabir',[*]'kabir’),"; SQL statement:
+insert into user_table (email,name,password,username) values ('kabir@gmail.com' , 'kabir thapar','kabir','kabir’), [42000-220]
+2024-02-03 20:07:09 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO user_table (email, name, password, username) \000d\000aVALUES ('kabir@gmail.com', 'kabir thapar', 'kabir', 'kabir'),[*]"; expected "ROW (, (, DEFAULT, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+INSERT INTO user_table (email, name, password, username) 
+VALUES ('kabir@gmail.com', 'kabir thapar', 'kabir', 'kabir'), [42001-220]
+2024-02-03 20:08:10 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO user_table (email, name, password, username) \000d\000aVALUES \000d\000a\000d\000a('anjali@gmail.com' , 'anjali surmara','anjali','anjali’),\000d\000a('subham@gmail.com' , 'subham surmara','subham','subham[*]’),\000d\000a('manish@gmail.com' , 'manish manchala','manish','manish’),\000d\000a('aditya@gmail.com' , 'aditya singh','aditya','aditya’),\000d\000a('pavan@gmail.com' , 'pavan ambati','pavan','pavan')"; SQL statement:
+INSERT INTO user_table (email, name, password, username) 
+VALUES 
+
+('anjali@gmail.com' , 'anjali surmara','anjali','anjali’),
+('subham@gmail.com' , 'subham surmara','subham','subham’),
+('manish@gmail.com' , 'manish manchala','manish','manish’),
+('aditya@gmail.com' , 'aditya singh','aditya','aditya’),
+('pavan@gmail.com' , 'pavan ambati','pavan','pavan') [42000-220]
+2024-02-03 20:08:24 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO user_table (email, name, password, username) \000d\000aVALUES \000d\000a('anjali@gmail.com' , 'anjali surmara','anjali',[*]'anjali’);"; SQL statement:
+INSERT INTO user_table (email, name, password, username) 
+VALUES 
+('anjali@gmail.com' , 'anjali surmara','anjali','anjali’); [42000-220]
+2024-02-03 20:09:44 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO user_table (email, name, password, username) \000d\000aVALUES \000d\000a('subham@gmail.com' , 'subham surmara','subham',[*]'subham’),"; SQL statement:
+INSERT INTO user_table (email, name, password, username) 
+VALUES 
+('subham@gmail.com' , 'subham surmara','subham','subham’), [42000-220]
+2024-02-03 20:09:45 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO user_table (email, name, password, username) \000d\000aVALUES \000d\000a('subham@gmail.com' , 'subham surmara','subham',[*]'subham’),"; SQL statement:
+INSERT INTO user_table (email, name, password, username) 
+VALUES 
+('subham@gmail.com' , 'subham surmara','subham','subham’), [42000-220]
+2024-02-03 20:09:50 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO user_table (email, name, password, username) \000d\000aVALUES \000d\000a('subham@gmail.com' , 'subham surmara','subham',[*]'subham’)"; SQL statement:
+INSERT INTO user_table (email, name, password, username) 
+VALUES 
+('subham@gmail.com' , 'subham surmara','subham','subham’) [42000-220]
+2024-02-03 20:10:06 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO user_table (email, name, password, username) \000d\000aVALUES \000d\000a('subham@gmail.com' , 'subham surmara', 'subham' , [*]'subham’)"; SQL statement:
+INSERT INTO user_table (email, name, password, username) 
+VALUES 
+('subham@gmail.com' , 'subham surmara', 'subham' , 'subham’) [42000-220]
+2024-02-03 20:10:31 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO user_table (email, name, password, username) \000d\000aVALUES ('subham@gmail.com' , 'subham surmara', 'subham' , [*]'subham’)"; SQL statement:
+INSERT INTO user_table (email, name, password, username) 
+VALUES ('subham@gmail.com' , 'subham surmara', 'subham' , 'subham’) [42000-220]
+2024-02-03 20:10:43 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO user_table (email, name, password, username) VALUES ('subham@gmail.com' , 'subham surmara', 'subham' , [*]'subham’),"; SQL statement:
+INSERT INTO user_table (email, name, password, username) VALUES ('subham@gmail.com' , 'subham surmara', 'subham' , 'subham’), [42000-220]
+2024-02-03 20:10:57 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO user_table (email, name, password, username) VALUES ('subham@gmail.com' , 'subham surmara', 'subham' , [*]'subham’);"; SQL statement:
+INSERT INTO user_table (email, name, password, username) VALUES ('subham@gmail.com' , 'subham surmara', 'subham' , 'subham’); [42000-220]
+2024-02-03 20:11:03 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO user_table (email, name, password, username) VALUES ('subham@gmail.com' , 'subham surmara', 'subham' , [*]'subham’)"; SQL statement:
+INSERT INTO user_table (email, name, password, username) VALUES ('subham@gmail.com' , 'subham surmara', 'subham' , 'subham’) [42000-220]
+2024-02-03 20:11:59 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO user_table (email, name, password, username) \000d\000aVALUES \000d\000a('manish@gmail.com' , 'manish manchala','manish',[*]'manish’),"; SQL statement:
+INSERT INTO user_table (email, name, password, username) 
+VALUES 
+('manish@gmail.com' , 'manish manchala','manish','manish’), [42000-220]
+2024-02-03 20:12:13 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO user_table (email, name, password, username)  VALUES ('manish@gmail.com' , 'manish manchala','manish',[*]'manish’),"; SQL statement:
+INSERT INTO user_table (email, name, password, username)  VALUES ('manish@gmail.com' , 'manish manchala','manish','manish’), [42000-220]
+2024-02-03 20:12:22 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO user_table (email, name, password, username)  VALUES ('manish@gmail.com' , 'manish manchala','manish','manish'),[*]"; expected "ROW (, (, DEFAULT, INTERSECTS (, NOT, EXISTS, UNIQUE, INTERSECTS"; SQL statement:
+INSERT INTO user_table (email, name, password, username)  VALUES ('manish@gmail.com' , 'manish manchala','manish','manish'), [42001-220]
+2024-02-03 20:15:09 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-03 20:30:52 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-03 20:31:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-03 20:32:17 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-03 20:32:43 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]

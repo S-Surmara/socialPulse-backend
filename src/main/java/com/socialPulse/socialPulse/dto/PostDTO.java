@@ -6,17 +6,17 @@ public class PostDTO {
     private String text;
     private MultipartFile image;
 
-    private Long userId;
+    private String username;
 
     // Constructors, getters, and setters
 
     public PostDTO() {
     }
 
-    public PostDTO(String text, MultipartFile image , Long userId) {
+    public PostDTO(String text, MultipartFile image , String username) {
         this.text = text;
         this.image = image;
-        this.userId = userId;
+        this.username = username;
     }
 
     public String getText() {
@@ -35,7 +35,7 @@ public class PostDTO {
         this.image = image;
     }
 
-    public Long getUserId() { return userId; }
+    public String getUsername() { return username; }
 
-    public void setUserId(Long userId){ this.userId = userId; }
+    public void setUsername(String username){ this.username = username; }
 }
