@@ -8,5 +8,5 @@ import java.util.List;
 public interface PostService {
     Post createPost(PostDTO postDTO);
 
-    List<Post> getUserPosts(Long userId);
+    List<Post> getUserPosts(String username);
 }

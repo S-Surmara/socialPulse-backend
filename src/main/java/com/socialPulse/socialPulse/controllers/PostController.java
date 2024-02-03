@@ -24,24 +24,25 @@ public class PostController {
     public ResponseEntity<Post> createPost(
             @RequestParam(value = "text") String text,
             @RequestPart(value = "image", required = false) MultipartFile image,
-            @RequestParam(value ="userId") Long userId
+            @RequestParam(value ="username") String username
     ) {
         System.out.println("text is : " + text);
         if(image != null) System.out.println("image is : " + image);
-        System.out.println("userId is : " + userId);
+        System.out.println("username is : " + username);
 
         PostDTO postDTO = new PostDTO();
         postDTO.setText(text);
         postDTO.setImage(image);
-        postDTO.setUserId(userId);
+        postDTO.setUsername(username);
 
         Post createdPost = postService.createPost(postDTO);
         return new ResponseEntity<>(createdPost, HttpStatus.CREATED);
     }
 
-    @GetMapping("/user/{userId}")
-    public ResponseEntity<List<Post>> getUserPosts(@PathVariable Long userId) {
-        List<Post> userPosts = postService.getUserPosts(userId);
+    @GetMapping("/user/{username}")
+    public ResponseEntity<List<Post>> getUserPosts(@PathVariable String username) {
+        List<Post> userPosts = postService.getUserPosts(username);
+        System.out.println("user posts:"+ userPosts);
         return new ResponseEntity<>(userPosts, HttpStatus.OK);
     }
 
