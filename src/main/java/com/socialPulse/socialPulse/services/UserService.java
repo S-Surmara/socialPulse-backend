@@ -1,10 +1,14 @@
 package com.socialPulse.socialPulse.services;
 
 import com.socialPulse.socialPulse.dto.SignupRequest;
+import com.socialPulse.socialPulse.dto.UsersDTO;
 import com.socialPulse.socialPulse.modal.User;
 import com.socialPulse.socialPulse.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class UserService {
@@ -57,5 +61,14 @@ public class UserService {
         }
 
         return null; // Return null if authentication fails
+    }
+
+    public List<UsersDTO> getAllUsers() {
+        List<User> users = userRepository.findAll();
+
+        // Convert User entities to UsersDTOs
+        return users.stream()
+                .map(user -> new UsersDTO(user.getName(), user.getUsername()))
+                .collect(Collectors.toList());
     }
 }
