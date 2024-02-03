@@ -19,9 +19,27 @@ public class Post {
     @Column(name = "user_id")
     private Long userId;
 
-    public Long getId() {
-            return id;
+    // Default constructor
+    public Post() {
     }
+
+    // Constructor with text and userId parameters
+    public Post(String text, Long userId) {
+        this.text = text;
+        this.userId = userId;
+    }
+
+    // Constructor with text, image, and userId parameters
+    public Post(String text, byte[] image, Long userId) {
+        this.text = text;
+        this.image = image;
+        this.userId = userId;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
     public void setId(Long id) {
         this.id = id;
     }
@@ -49,12 +67,4 @@ public class Post {
     public void setUserId(Long userId) {
         this.userId = userId;
     }
-
-    // Constructor with text and image parameters
-    public Post(String text, byte[] image , Long userId) {
-        this.text = text;
-        this.image = image;
-        this.userId = userId;
-    }
-
 }

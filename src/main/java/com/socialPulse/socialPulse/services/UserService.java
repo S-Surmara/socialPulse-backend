@@ -36,7 +36,9 @@ public class UserService {
 
         // Create a new user
         User newUser = new User();
+        newUser.setName((signupRequest.getName()));
         newUser.setUsername(signupRequest.getUsername());
+        newUser.setEmail(signupRequest.getEmail());
         newUser.setPassword(signupRequest.getPassword());
 
         // Save the new user to the database

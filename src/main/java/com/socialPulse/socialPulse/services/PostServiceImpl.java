@@ -27,16 +27,18 @@ public class PostServiceImpl implements PostService {
         Long userId = postDTO.getUserId();
 
         // Convert MultipartFile to byte[]
-        byte[] image;
+        byte[] image = null;
         try {
-            image = multipartImage.getBytes();
+            if(multipartImage != null) image = multipartImage.getBytes();
         } catch (IOException e) {
             // Handle the exception (e.g., log it or throw a custom exception)
             throw new RuntimeException("Error converting MultipartFile to byte[]", e);
         }
 
         // Create a new Post entity using the extracted values
-        Post post = new Post(text, image , userId);
+        Post post;
+        if(image != null ) post = new Post(text, image , userId);
+        else post = new Post(text , userId);
         return postRepository.save(post);
     }
 

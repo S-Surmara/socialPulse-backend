@@ -21,18 +21,18 @@ public class PostController {
 
     @PostMapping("/posts")
     public ResponseEntity<Post> createPost(
-            @RequestPart("text") String text,
-            @RequestPart("image") MultipartFile image,
-            @RequestPart("userId") Long userId
+            @RequestParam(value = "text") String text,
+            @RequestPart(value = "image", required = false) MultipartFile image,
+            @RequestParam(value ="userId") Long userId
     ) {
+        System.out.println("text is : " + text);
+        if(image != null) System.out.println("image is : " + image);
+        System.out.println("userId is : " + userId);
+
         PostDTO postDTO = new PostDTO();
         postDTO.setText(text);
         postDTO.setImage(image);
         postDTO.setUserId(userId);
-
-        System.out.println("text is : " + text);
-        System.out.println("image is : " + image);
-        System.out.println("userId is : " + userId);
 
         Post createdPost = postService.createPost(postDTO);
         return new ResponseEntity<>(createdPost, HttpStatus.CREATED);
