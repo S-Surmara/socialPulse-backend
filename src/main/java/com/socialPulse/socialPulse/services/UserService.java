@@ -68,7 +68,7 @@ public class UserService {
 
         // Convert User entities to UsersDTOs
         return users.stream()
-                .map(user -> new UsersDTO(user.getName(), user.getUsername()))
+                .map(user -> new UsersDTO(user.getId(),user.getName(), user.getUsername()))
                 .collect(Collectors.toList());
     }
 }
