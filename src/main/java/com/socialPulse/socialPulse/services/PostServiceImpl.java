@@ -9,6 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class PostServiceImpl implements PostService {
@@ -43,9 +44,30 @@ public class PostServiceImpl implements PostService {
     }
 
     @Override
+    public int deletePost(int a) {
+        long id = a;
+        Post post;
+        boolean exists = postRepository.existsById(id);
+        if(exists)
+             post = postRepository.getReferenceById(id);
+        else
+            return 1;
+        postRepository.delete(post);
+        return 0;
+    }
+
+    @Override
     public List<Post> getUserPosts(String username) {
         // Implement logic to retrieve posts for a specific user
         // You can adjust this based on your user structure
         return postRepository.findByUsername(username);
     }
+
+    @Override
+    public Optional<Post> getUserPostById(int id) {
+        long a = id;
+        return postRepository.findById(a);
+    }
+
+
 }
