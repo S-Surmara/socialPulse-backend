@@ -34,7 +34,12 @@ public class FriendshipService {
         // Retrieve the friendship entity by user and friend IDs
         System.out.println("userId = "+ requestDTO.getUserId());
         System.out.println("friendID = "+ requestDTO.getFriendId());
-        Friendship friendship = friendshipRepository.findByUser_IdAndFriend_Id(requestDTO.getUserId(), requestDTO.getFriendId());
+        Friendship friendship = null;
+        try {
+            friendship = friendshipRepository.findByUser_IdAndFriend_Id(requestDTO.getUserId(), requestDTO.getFriendId());
+        }catch (Exception e){
+            System.out.println("inside exception" + e);
+        }
         System.out.println("friendship = "+ friendship);
         // Update the status to "accepted"
         friendship.setStatus("accepted");
