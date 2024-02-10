@@ -1,0 +1,6 @@
+CREATE TABLE IF NOT EXISTS posts (
+    id BIGINT AUTO_INCREMENT PRIMARY KEY,
+    text VARCHAR(255),
+    image MEDIUMBLOB,
+    username VARCHAR(255)
+);

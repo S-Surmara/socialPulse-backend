@@ -67,8 +67,8 @@ public class FriendshipController {
     }
 
     @GetMapping("/{userId}/friends")
-    public ResponseEntity<List<User>> getFriendsOfUser(@PathVariable Long userId) {
-        List<User> friends = friendshipService.findFriendsOfUser(userId);
+    public ResponseEntity<List<Map<String, Object>>> getFriendsOfUser(@PathVariable Long userId) {
+        List<Map<String, Object>> friends = friendshipService.findFriendsOfUser(userId);
         if (friends.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
