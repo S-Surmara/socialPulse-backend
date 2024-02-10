@@ -11,6 +11,7 @@ import org.springframework.stereotype.Service;
 import com.socialPulse.socialPulse.repository.UserRepository;
 
 import java.util.List;
+import java.util.Map;
 
 @Service
 public class FriendshipService {
@@ -63,12 +64,12 @@ public class FriendshipService {
         friendshipRepository.save(friendship);
     }
 
-    public List<User> findFriendsOfUser(Long userId) {
+    public List<Map<String, Object>> findFriendsOfUser(Long userId) {
         System.out.println("inside get all friends for userId"+userId);
         List<Long> friendIds = friendshipRepository.findFriendIdsByUserId(userId);
         List<Long> userIds = friendshipRepository.findUsersIdsByFriendId(userId);
         friendIds.addAll(userIds);
-        List<User> friends = userRepository.findByIdIn(friendIds);
+        List<Map<String, Object>> friends = userRepository.findIdNameUsernameByIdIn(friendIds);
         return  friends;
     }
 }

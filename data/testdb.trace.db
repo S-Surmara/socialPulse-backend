@@ -26,3 +26,34 @@ SELECT f.friend_id FROM Friendship f WHERE f.user_id = 1 [42103-220]
 2024-02-06 22:08:32 jdbc[13]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "SELECT f.friend_id FROM friendship f WHERE f.user_id = [*]:userId"; expected "ALL (, ANY (, SOME ("; SQL statement:
 SELECT f.friend_id FROM friendship f WHERE f.user_id = :userId [42001-220]
+2024-02-10 09:54:39 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "posts" not found; SQL statement:
+select p1_0.id,p1_0.image,p1_0.text,p1_0.username from posts p1_0 where p1_0.username=? [42102-220]
+2024-02-10 09:55:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "posts" not found; SQL statement:
+insert into posts (image,text,username,id) values (?,?,?,default) [42102-220]
+2024-02-10 09:55:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "posts" not found; SQL statement:
+select p1_0.id,p1_0.image,p1_0.text,p1_0.username from posts p1_0 where p1_0.username=? [42102-220]
+2024-02-10 09:56:21 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "posts" not found; SQL statement:
+select * from posts [42102-220]
+2024-02-10 09:56:23 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "post" not found; SQL statement:
+select * from post [42102-220]
+2024-02-10 10:04:15 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-10 10:09:41 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from posts\000d\000a[*]select * from friends"; SQL statement:
+select * from posts
+select * from friends [42000-220]
+2024-02-10 10:09:50 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "select * from posts\000d\000a[*]select * from friendship"; SQL statement:
+select * from posts
+select * from friendship [42000-220]
+2024-02-10 10:11:21 jdbc[4]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-10 10:12:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
+2024-02-10 10:12:59 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLNonTransientException: The object is already closed [90007-220]
